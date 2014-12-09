@@ -1,4 +1,0 @@
--This is my list: 
-- shampoo
-- soap
-- paper
