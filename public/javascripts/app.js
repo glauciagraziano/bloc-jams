@@ -92,7 +92,7 @@
 })();
 require.register("scripts/app", function(exports, require, module) {
 require("./landing");
-require("./collection")
+require('./collection');
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
@@ -120,7 +120,7 @@ require("./collection")
 var updateCollectionView = function() {
   var $collection = $(".collection-container .row");
   $collection.empty();
-  var random = Math.floor((Math.random() * 100) + 25);  // x is random, from 25 to 100
+  var random = Math.random() * (100 - 25) + 25;  // x is random, from 25 to 100
   for (var i = 0;  i < random; i++) {
     var $newThumbnail = buildAlbumThumbnail();
       $collection.append($newThumbnail);
