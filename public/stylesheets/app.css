@@ -113,5 +113,11 @@ body.landing {
   .collection-album-container img {
     max-width: 100%; 
   }
+  .next {
+    float: right;
+  }
+  .prev {
+    float: left;
+  }
 
 /*# sourceMappingURL=app.css.map*/
