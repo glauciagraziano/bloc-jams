@@ -1,0 +1,73 @@
+.album-header-container {
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
+
+//This styles the right side of the Album Header
+.album-header-information {
+  //Pushes the album information down and makes sure there is sufficient space at the bottom of the page
+  $header-information-line-height: 150%; 
+  margim-top: 45px;
+  margin-bottom: 20px; 
+  
+  h3 {
+   font-size: 48px;
+   font-weight: 300;
+   line-height: $header-information-line-height;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: $header-information-line-height;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: $header-information-line-height;
+  }
+}
+
+//This styles our Song Listing
+.table.album-song-listing {
+  //Override the font for the entire table.
+  font-weight: 300;
+  //Override the defaults that Bootstrap sets.
+  td {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 4);
+  }
+}
+
+//Override the defaults that Bootstrap sets. 
+.album-song-button {
+   text-align: center;
+   font-size: 14px;
+   background-color: white;
+   color: #d2287b;
+   border-radius: 50% 50%;
+   display: inline-block;
+   width: 28px;
+   height: 28px;
+  
+   :hover {
+     cursor: pointer;
+     color: white;
+     background-color: #d2287b;
+   }
+   i {
+     line-height: 28px;
+   }
+   .fa-play {
+   padding-left: 5px;
+   }
+ }
+
+ .album-song-listing td {
+   vertical-align: center;
+ }
+ 
+ td.song-number {
+   padding: 0;
+   height: 70px;
+   text-align: center;
+ }
