@@ -71,6 +71,13 @@ td.song-number {
   height: 70px;
   text-align: center; }
 
+.placeholder pager {
+  width: 100%; }
+  .placeholder pager prev {
+    align: left; }
+  .placeholder pager next {
+    align: right; }
+
 .collection-album-container {
   margin-top: 30px;
   margin-bottom: 20px;
