@@ -293,9 +293,42 @@ var albumPicasso = {
 });
 
 ;require.register("scripts/app", function(exports, require, module) {
-require("./landing");
-require('./collection');
-require('./album');
+ //require('./landing');
+ //require('./album');
+ //require('./collection');
+ //require('./profile');
+ 
+ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', function($scope) {
+   
+   $scope.siteName = "Bloc Jams";
+   
+   $scope.subText = "Turn the music up!";
+   
+   $scope.subTextClicked = function() {
+     $scope.subText += '!';
+   };
+   
+   $scope.siteNameClicked = function() {
+     $scope.albumURLs = [
+     '/images/album-placeholders/album-1.jpg',
+     '/images/album-placeholders/album-2.jpg',
+     '/images/album-placeholders/album-3.jpg',
+     '/images/album-placeholders/album-4.jpg',
+     '/images/album-placeholders/album-5.jpg',
+     '/images/album-placeholders/album-6.jpg',
+     '/images/album-placeholders/album-7.jpg',
+     '/images/album-placeholders/album-8.jpg',
+     '/images/album-placeholders/album-9.jpg',
+   ];
+     function shuffle(albumURLs){ //v1.0
+       for(var j, x, i = albumURLs.length; i; j = Math.floor(Math.random() * i), x = albumURLs[--i], albumURLs[i] = albumURLs[j], albumURLs[j] = x);
+      return albumURLs;
+      };
+
+     shuffle([1,2,3]);
+     
+   };  
+ }]);
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
@@ -395,6 +428,29 @@ $(document).ready(function() {
 });
 
 
+});
+
+;require.register("scripts/profile", function(exports, require, module) {
+// holds the name of our tab button container for selection later in the function
+var tabsContainer = ".user-profile-tabs-container"
+var selectTabHandler = function(event) {
+  $tab = $(this);
+  $(tabsContainer + " li").removeClass('active');
+  $tab.parent().addClass('active');
+  selectedTabName = $tab.attr('href');
+  console.log(selectedTabName);
+  $(".tab-pane").addClass('hidden');
+  $(selectedTabName).removeClass('hidden');
+  event.preventDefault();
+};
+ 
+ if (document.URL.match(/\/profile.html/)) {
+   $(document).ready(function() {
+     var $tabs = $(tabsContainer + " a");
+     $tabs.click(selectTabHandler);
+     $tabs[0].click();
+   });
+ }
 });
 
 ;
