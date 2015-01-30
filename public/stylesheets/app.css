@@ -76,6 +76,9 @@ td.song-number {
 .pager next {
   text-align: right; }
 
+.odd {
+  background-color: rgba(255, 255, 255, 0.3); }
+
 .collection-album-container {
   margin-top: 30px;
   margin-bottom: 20px;

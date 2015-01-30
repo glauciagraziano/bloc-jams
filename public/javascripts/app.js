@@ -330,7 +330,7 @@ var albumPicasso = {
      controller: 'Collection.controller',
      templateUrl: '/templates/collection.html'
    });
-   $stateProvider.state('album', {
+     $stateProvider.state('album', {
      url: '/album',
      templateUrl: '/templates/album.html',
      controller: 'Album.controller'
@@ -399,6 +399,8 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
      }
      return 'default';
    };
+   
+   
     $scope.playSong = function(song) {
       playingSong = song;
     };
@@ -406,6 +408,7 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
     $scope.pauseSong = function(song) {
       playingSong = null;
     };
+   
  }]);
 });
 
