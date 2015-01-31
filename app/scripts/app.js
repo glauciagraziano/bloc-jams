@@ -22,6 +22,17 @@
  
  
  blocJams = angular.module('BlocJams', ['ui.router']);
+ 
+ blocJams.config(function($stateProvider, $urlRouterProvider) {
+   $urlRouterProvider.otherwise("/player_bar");
+   
+   $stateProvider
+     .state('player_bar', {
+       url: '/player_bar', 
+       templateUrl: '/templates/player_bar.html'
+     })
+ })
+
  blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
  
