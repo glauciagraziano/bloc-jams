@@ -309,7 +309,7 @@ blocJams.directive('slider', ['$document', function($document) {
 }]);
 
 //Filter to show time on player bar represented in minutes
-blocJams.filter('timecode', function(){
+blocJams.filter('timecode', function(filter){
    return function(seconds) {
      seconds = Number.parseFloat(seconds);
  
