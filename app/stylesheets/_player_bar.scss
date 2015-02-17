@@ -81,10 +81,11 @@
       display: $display-inline;
  
       i {
-        width: 40px;
+        width: 20px;
         font-size: 20px;
         display: $display-inline;
         vertical-align: middle;
+        text-align: left;
       }
  
       .slider {
